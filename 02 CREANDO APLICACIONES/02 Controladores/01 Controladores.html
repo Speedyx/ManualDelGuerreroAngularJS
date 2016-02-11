@@ -8,13 +8,18 @@
 </head>
 <body>
 
-	<div ng-controller="miControlador"> {{ mensaje }}</div>
+	<div ng-controller="miControlador">
+		{{ mensaje }}
+		<BR>
+		{{ segundoMensaje }}		
+	</div>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 	<script>
 		var miAppDeControladores = angular.module('controladoresApp',[]);
 		miAppDeControladores.controller('miControlador', function($scope){
 				$scope.mensaje = "Expresiones AngularJS";
+				$scope.segundoMensaje = "¡Te dejan agregar muchos valores!";
 		});
 	</script>
 </body>
