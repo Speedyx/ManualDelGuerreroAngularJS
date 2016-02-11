@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="controladoresApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS - Funciones y métodos</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+	<div ng-controller="miControlador">
+		<p>{{ mensaje }} ... {{ segundoMensaje }}</p>
+		<p>Este libro fue escrito por {{ libro.autor }}, se llama "{{ libro.titulo }}" y habla sobre {{ libro.tema }}</p>
+		<p>Y el número aleatorio es: {{ numAleatorio() }}</p>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script>
+		var miAppDeControladores = angular.module('controladoresApp',[]);
+		miAppDeControladores.controller('miControlador', function($scope){
+				$scope.mensaje = "Expresiones AngularJS";
+				$scope.segundoMensaje = "¡Te dejan agregar muchos valores!";
+				
+				//Objetos
+				$scope.libro = {}
+				$scope.libro.autor = "Carlos"
+				$scope.libro.titulo = "Manual del guerrero"
+				$scope.libro.tema = "AngularJS"
+
+				//Métodos (funciones dentro de un objeto)
+				$scope.numAleatorio = function(){
+					return Math.floor(Math.random() * 100);
+				}
+		});
+	</script>
+</body>
+</html>

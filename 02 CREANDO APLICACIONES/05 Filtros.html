@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="filtros">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS - Filtros de expresiones</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+
+	<style>h3{text-transform: capitalize;}</style>
+</head>
+<body>
+
+	<h1>Angular Café - Dólares</h1>
+	<h2>Café Americano: {{ 12 | currency }}</h2>
+	<h2>Café Latte: {{ 12 | currency}}</h2>
+	
+	<h1>Angular Café - Euros</h1>
+	<h2>Café Americano: {{ 12 | currency: "€" }}</h2>
+	<h2>Café Latte: {{ 12 | currency: "€" }}</h2>
+
+	<h1>Angular Café - Dólares americanos</h1>
+	<h2>Café Americano: {{ 12 | currency: "USD $" }}</h2>
+	<h2>Café Latte: {{ 12 | currency: "USD $" }}</h2>
+
+	<h1>Normalizando nombres a mayúsculas</h1>
+	<p>{{ "China" | uppercase }}</p>
+	<p>{{ "ChiLE" | uppercase }}</p>
+	<p>{{ "CROACIA" | uppercase }}</p>
+	<p>{{ "coLOMBia" | uppercase }}</p>
+	<p>{{ "costa rica" | uppercase }}</p>
+	
+	<h1>Normalizando nombres a minúsculas</h1>
+	<p>{{ "China" | lowercase }}</p>
+	<p>{{ "ChiLE" | lowercase }}</p>
+	<p>{{ "CROACIA" | lowercase }}</p>
+	<p>{{ "coLOMBia" | lowercase }}</p>
+	<p>{{ "costa rica" | lowercase }}</p>
+	
+	<h1>Normalizando nombres con CSS</h1>
+	<h3>{{ "China" | lowercase }}</h3>
+	<h3>{{ "ChiLE" | lowercase }}</h3>
+	<h3>{{ "CROACIA" | lowercase }}</h3>
+	<h3>{{ "coLOMBia" | lowercase }}</h3>
+	<h3>{{ "costa rica" | lowercase }}</h3>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script>
+		var filtros = angular.module('filtros', []);
+	</script>
+</body>
+</html>
