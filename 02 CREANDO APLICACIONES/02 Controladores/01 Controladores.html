@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="controladoresApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS - Controladores</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+	<div ng-controller="miControlador"> {{ mensaje }}</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script>
+		var miAppDeControladores = angular.module('controladoresApp',[]);
+		miAppDeControladores.controller('miControlador', function($scope){
+				$scope.mensaje = "Expresiones AngularJS";
+		});
+	</script>
+</body>
+</html>

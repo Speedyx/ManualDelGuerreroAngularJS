@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="expresionesApp">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS - Expresiones</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+	<div>{{ 5 + 5 }}</div>
+	<div>Si multiplicas 10 por 2 el resultado es: {{ 10 * 2 }}</div>
+	<div>{{ (30 - 10) / 100 * 8 }}</div>
+	<div>{{ 2.8 + (-500) + 3 }}</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script>
+		var miAppAngular = angular.module('expresionesApp',[]);
+	</script>
+</body>
+</html>
